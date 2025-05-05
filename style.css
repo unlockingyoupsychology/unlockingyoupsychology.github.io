@@ -1,0 +1,113 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fcff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #d0eaff;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  border-bottom: 4px solid #a3d0f7;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #1e4d72;
+}
+
+/* Navigation Bar */
+nav {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+nav a {
+  text-decoration: none;
+  color: #1e4d72;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #0077cc;
+}
+
+/* Main Container */
+.container {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Intro Section */
+.intro {
+  background-color: #eaf6ff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.intro h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #1e4d72;
+}
+
+.intro p {
+  margin-bottom: 1rem;
+}
+
+/* Highlights Section */
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.highlight-card {
+  flex: 1 1 280px;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-left: 4px solid #a3d0f7;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.highlight-card h3 {
+  color: #1e4d72;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background: #d0eaff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Responsive Typography */
+@media (max-width: 600px) {
+  .intro h2 {
+    font-size: 1.5rem;
+  }
+}
