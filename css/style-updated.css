@@ -833,3 +833,22 @@ a.button.primary {
   border: 4px solid #ccc;
   margin: 1.5rem auto;
 }
+
+
+#about .row {
+  display: flex;
+  align-items: center; /* Vertically align the items */
+}
+
+.text-section {
+  flex: 2; /* Takes up 2/3 of the space */
+}
+
+.image-section {
+  flex: 1; /* Takes up 1/3 of the space */
+}
+
+.image-section img {
+  width: 100%; /* Make the image responsive */
+  height: auto;
+}
