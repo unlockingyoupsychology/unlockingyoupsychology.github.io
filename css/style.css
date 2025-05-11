@@ -780,8 +780,10 @@ a.button.primary {
 }
 
 .nav-logo {
-  height: 20px;
-  width: 20px;
+  height: 40px;
+  width: auto;
+  max-height: 40px;
+  display: inline-block;
 }
 
 .brand-text {
