@@ -771,3 +771,23 @@ a.button.primary {
   border: 4px solid #ccc;
   margin-top: 1rem;
 }
+
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo {
+  height: 40px;
+  width: auto;
+}
+
+.brand-text {
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #304352;
+  white-space: nowrap;
+}
