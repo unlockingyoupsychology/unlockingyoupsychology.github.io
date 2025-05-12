@@ -794,10 +794,10 @@ a.button.primary {
   /* If I want the background back
   background: none !important;
   */
-  background: #f2e6c6; 
+  background: #f2e6c6 !important; 
 }
 
-#services .services-wrapper {
+#services .services-wrapper !important {
   background: #fff;
   max-width: 960px;
   margin: 0 auto;
