@@ -794,7 +794,7 @@ a.button.primary {
   /* If I want the background back
   background: none !important;
   */
-  background: #FF0000 !important; 
+  background: #F0F0F0; 
 }
 
 /* Center-align the Clinical Psychologist section */
@@ -895,3 +895,12 @@ a.button.primary {
   margin: 0;
 }
 
+
+.services-wrapper {
+  background: #fff;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
