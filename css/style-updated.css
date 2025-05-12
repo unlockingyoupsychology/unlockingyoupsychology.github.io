@@ -375,7 +375,7 @@ a:hover, a:active, a:focus {
 #about .about-thumb {
   background: #ffffff;
   border-radius: 4px;
-  padding: 100px;
+  padding: 50px;
   position: relative;
 }
 
@@ -614,7 +614,7 @@ footer {
   }
 */
   #about .team-thumb {
-    margin-top: 32px;
+    margin-top: 10px;
   }
 
 }
@@ -667,7 +667,7 @@ footer {
 
 /* Basic structure and reset if needed */
 section.main {
-  padding: 4em 0;
+  padding: 2em 0;
   text-align: center;
 }
 
