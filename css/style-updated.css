@@ -794,7 +794,7 @@ a.button.primary {
   /* If I want the background back
   background: none !important;
   */
-  background: #f2e6c6 !important; 
+  background: #0f0f0f !important; 
 }
 
 #services .services-wrapper !important {
@@ -911,4 +911,26 @@ a.button.primary {
   padding: 3rem 2rem;
   border-radius: 12px;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Enlarge service images in a 2x2 full-width layout */
+#services .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 0;
+  margin-top: 30px;
+}
+
+#services .grid li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#services .grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
 }
