@@ -860,7 +860,7 @@ a.button.primary {
   gap: 30px;
   flex-wrap: wrap;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .info-icon-box {
@@ -886,3 +886,9 @@ a.button.primary {
 .info-icon-box:hover i {
   color: #007BFF; /* Customize hover color here */
 }
+
+.info-icon-box p {
+  font-weight: bold;
+  margin: 0;
+}
+
