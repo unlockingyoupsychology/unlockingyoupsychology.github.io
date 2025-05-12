@@ -791,7 +791,10 @@ a.button.primary {
 
 /* Remove background from services/gallery section */
 #services {
+  /* If I want the background back
   background: none !important;
+  */
+  background: #f0f0f0; 
 }
 
 /* Center-align the Clinical Psychologist section */
