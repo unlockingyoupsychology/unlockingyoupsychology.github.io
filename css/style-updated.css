@@ -852,3 +852,37 @@ a.button.primary {
   width: 100%; /* Make the image responsive */
   height: auto;
 }
+
+
+.info-icons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.info-icon-box {
+  flex: 1;
+  min-width: 220px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-icon-box i {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.info-icon-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-icon-box:hover i {
+  color: #007BFF; /* Customize hover color here */
+}
