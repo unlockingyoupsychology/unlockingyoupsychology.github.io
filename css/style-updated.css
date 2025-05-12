@@ -794,7 +794,7 @@ a.button.primary {
   /* If I want the background back
   background: none !important;
   */
-  background: #FF0000; 
+  background: #FF0000 !important; 
 }
 
 /* Center-align the Clinical Psychologist section */
