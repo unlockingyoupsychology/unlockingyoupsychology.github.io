@@ -262,7 +262,7 @@
         </div>
         
         <!-- Success message that will be shown after submission -->
-        <div id="form-success" class="wow fadeIn" style="display: none; text-align: center; padding: 30px;">
+        <div id="form-success" class="wow fadeIn" style="display: none; text-align: center; margin-bottom: 30px;">
           <div style="font-size: 50px; color: #5cb85c; margin-bottom: 20px;">✓</div>
           <h3>Thank you!</h3>
           <p>Your message has been sent successfully. We'll get back to you soon.</p>
@@ -279,10 +279,7 @@
             <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" required></textarea>
           </div>
           <div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
-            <button type="submit" class="form-control" id="submit-button">
-              <span id="button-text">SEND MESSAGE</span>
-              <span id="button-spinner" style="display: none;">SENDING...</span>
-            </button>
+            <input type="submit" class="form-control" id="submit-button" value="SEND MESSAGE">
           </div>
         </form>
       </div>
@@ -294,16 +291,17 @@
 $(document).ready(function() {
   // Get the form element
   var $form = $('#contact-form');
+  var $submitButton = $('#submit-button');
+  var originalButtonValue = $submitButton.val();
   
   // Add submit event listener to the form
   $form.submit(function(event) {
     // Prevent the default form submission
     event.preventDefault();
     
-    // Show spinner, hide button text
-    $('#button-text').hide();
-    $('#button-spinner').show();
-    $('#submit-button').prop('disabled', true);
+    // Change button text and disable it
+    $submitButton.val('SENDING...');
+    $submitButton.prop('disabled', true);
     
     // Send form data to Formspree using jQuery AJAX
     $.ajax({
@@ -314,21 +312,24 @@ $(document).ready(function() {
     })
     .done(function(response) {
       // Hide form, show success message with animation
-      $form.slideUp(400, function() {
-        $('#form-success').fadeIn(400);
+      $form.fadeOut(300, function() {
+        $('#form-success').fadeIn(300);
       });
       
       // Clear the form fields
       $form[0].reset();
+      
+      // Reset button state
+      $submitButton.val(originalButtonValue);
+      $submitButton.prop('disabled', false);
     })
     .fail(function(error) {
       console.error('Error:', error);
       alert('There was an error sending your message. Please try again.');
       
       // Reset button state
-      $('#button-text').show();
-      $('#button-spinner').hide();
-      $('#submit-button').prop('disabled', false);
+      $submitButton.val(originalButtonValue);
+      $submitButton.prop('disabled', false);
     });
   });
 });
