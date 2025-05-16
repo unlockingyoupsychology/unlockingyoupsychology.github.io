@@ -249,7 +249,7 @@
   </div>
 </section> -->
 
-<!-- NEW Contact Section -->
+<!-- NEW Contact Section 
 
 <section id="contact">
   <div class="overlay"></div>
@@ -262,7 +262,7 @@
           <p>To ensure we can provide the right support for you, please share a few words of what is prompting you to seek therapy. We'll respond to you as soon as possible</p>
         </div>
         
-        <!-- Success message that will be shown after submission -->
+       Success message that will be shown after submission 
         <div id="form-success" class="wow fadeIn" style="display: none; text-align: center; margin-bottom: 30px;">
           <div style="font-size: 50px; color: #5cb85c; margin-bottom: 20px;">✓</div>
           <h3>Thank you!</h3>
@@ -334,6 +334,104 @@ $(document).ready(function() {
       $submitButton.val(originalButtonValue);
       $submitButton.prop('disabled', false);
     });
+  });
+});
+</script>
+-->
+
+
+<section id="contact">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+       <div class="col-md-offset-1 col-md-10 col-sm-12 text-center">
+        <div class="section-title wow fadeInUp" data-wow-delay="0.4s" style="padding-bottom: 30px;">
+          <h1>SEND A MESSAGE</h1>
+          <p>&nbsp</p>
+          <p>To ensure we can provide the right support for you, please share a few words of what is prompting you to seek therapy. We'll respond to you as soon as possible</p>
+        </div>
+        
+        <!-- Success message that will be shown after submission -->
+        <div id="form-success" class="wow fadeIn" style="display: none; text-align: center; margin-bottom: 30px;">
+          <div style="font-size: 50px; color: #5cb85c; margin-bottom: 20px;">✓</div>
+          <h3>Thank you!</h3>
+          <p>Your message has been sent successfully. We'll get back to you soon.</p>
+        </div>
+        
+        <!-- Form container that will be hidden on success -->
+        <div id="form-container" class="wow fadeInUp" data-wow-delay="0.8s">
+          <form id="contact-form" action="https://formspree.io/f/xvgaloag" method="POST">
+            <input type="hidden" name="_next" value="#"> <!-- Prevents the default redirect -->
+            <div class="col-md-6 col-sm-6">
+              <input name="name" type="text" class="form-control" id="name" placeholder="Name" required>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <input name="email" type="email" class="form-control" id="email" placeholder="Email" required>
+            </div>
+            <div class="col-md-12 col-sm-12">
+              <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" required></textarea>
+            </div>
+            <div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
+              <input type="submit" class="form-control" id="submit-button" value="SEND MESSAGE" style="background-color: #e44c65;">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Get the form elements
+  var form = document.getElementById('contact-form');
+  var formContainer = document.getElementById('form-container');
+  var successMessage = document.getElementById('form-success');
+  var submitButton = document.getElementById('submit-button');
+  var originalButtonValue = submitButton.value;
+  
+  // Create a hidden iframe for the form submission
+  var iframe = document.createElement('iframe');
+  iframe.name = 'hidden-iframe';
+  iframe.style.display = 'none';
+  document.body.appendChild(iframe);
+  
+  // Set the form to submit to the iframe
+  form.target = 'hidden-iframe';
+  
+  // Add submit event listener to the form
+  form.addEventListener('submit', function(event) {
+    // Don't prevent default submission - we need it to submit to iframe
+    
+    // Change button text and disable
+    submitButton.value = 'SENDING...';
+    submitButton.disabled = true;
+    
+    // Hide form and show success message after a short delay
+    // This simulates the completion of form submission
+    setTimeout(function() {
+      formContainer.style.display = 'none';
+      successMessage.style.display = 'block';
+      
+      // Reset form and button
+      form.reset();
+      submitButton.value = originalButtonValue;
+      submitButton.disabled = false;
+    }, 1500);
+  });
+  
+  // Listen for the iframe to load (form submission complete)
+  iframe.addEventListener('load', function() {
+    // Check if this is the first load (initial page load) or a form submission
+    if (iframe.contentWindow.location.href !== 'about:blank') {
+      // Form has been submitted
+      formContainer.style.display = 'none';
+      successMessage.style.display = 'block';
+      
+      // Reset form and button
+      form.reset();
+      submitButton.value = originalButtonValue;
+      submitButton.disabled = false;
+    }
   });
 });
 </script>
