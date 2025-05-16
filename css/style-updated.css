@@ -940,7 +940,6 @@ a.button.primary {
   border-radius: 8px;
 }
 
-
 #services1 {
   background: #ffffff;
   padding: 0 0 50px;
@@ -1005,8 +1004,8 @@ a.button.primary {
 #services1 figure img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  padding: 0;
+  object-fit: contain;
+  padding: 10px;
   transition: all 0.5s ease;
 }
 
@@ -1019,8 +1018,8 @@ a.button.primary {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.8);
-  color: #333;
+  background: rgba(25, 44, 69, 0.85);
+  color: #ffffff;
   opacity: 0;
   transition: all 0.3s ease;
 }
@@ -1031,7 +1030,7 @@ a.button.primary {
 
 #services1 figcaption h1 {
   margin: 0;
-  color: #333;
+  color: #ffffff;
   font-size: 22px;
   text-align: center;
   text-transform: uppercase;
