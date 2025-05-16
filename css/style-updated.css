@@ -943,13 +943,9 @@ a.button.primary {
 
 #services1 {
   background: #ffffff;
-  padding: 20px 0 50px;
+  padding: 0 0 50px;
   width: 100%;
-}
-
-#services1 .section-title {
-  text-align: center;
-  margin-bottom: 20px;
+  margin-top: 0;
 }
 
 #services1 .container {
@@ -958,8 +954,21 @@ a.button.primary {
   margin: 0 auto;
 }
 
+#services1 .section-title {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #333;
+}
+
 #services1 .row {
   width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 #services1 .grid {
@@ -970,6 +979,7 @@ a.button.primary {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
   width: 100%;
+  max-width: 1200px;
 }
 
 #services1 .grid li {
@@ -980,11 +990,11 @@ a.button.primary {
   position: relative;
   overflow: hidden;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0;
   margin: 0;
-  height: 550px;
+  height: 400px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 #services1 figure div {
@@ -995,36 +1005,37 @@ a.button.primary {
 #services1 figure img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  padding: 10px;
+  object-fit: cover;
+  padding: 0;
   transition: all 0.5s ease;
 }
 
 #services1 figcaption {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
-  background: rgba(48, 67, 82, 0.8);
-  color: #ffffff;
-  padding: 15px;
-  transform: translateY(100%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  opacity: 0;
   transition: all 0.3s ease;
 }
 
 #services1 figure:hover figcaption {
-  transform: translateY(0);
-}
-
-#services1 figure:hover img {
-  transform: scale(1.1);
+  opacity: 1;
 }
 
 #services1 figcaption h1 {
   margin: 0;
-  color: #ffffff;
+  color: #333;
   font-size: 22px;
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 /* Responsive adjustments */
