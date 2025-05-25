@@ -1043,3 +1043,124 @@ a.button.primary {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ===== GALLERY & SERVICES SECTION STYLES ===== */
+
+/* Shared container styles */
+#gallery .container,
+#services2 .container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Shared grid list */
+#gallery ul.grid,
+#services2 ul.grid {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Grid items */
+#gallery ul.grid > li,
+#services2 ul.grid > li {
+  flex: 1 1 calc(50% - 20px);
+  box-sizing: border-box;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  #gallery ul.grid > li,
+  #services2 ul.grid > li {
+    flex: 1 1 100%;
+  }
+}
+
+/* Image figures */
+#gallery figure,
+#services2 figure {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
+
+#gallery figure img,
+#services2 figure img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+#gallery figure:hover img,
+#services2 figure:hover img {
+  transform: scale(1.05);
+}
+
+/* Figcaption styles */
+#gallery figcaption,
+#services2 figcaption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#gallery figure:hover figcaption,
+#services2 figure:hover figcaption {
+  opacity: 1;
+}
+
+/* Specific to cs-style-4 gallery layout */
+#gallery ul.cs-style-4 figure {
+  cursor: pointer;
+}
+
+/* Section titles */
+#gallery .section-title,
+#services2 .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#gallery .section-title h1,
+#services2 .section-title {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+#gallery .section-title p {
+  font-size: 1.1em;
+  color: #777;
+}
+
+/* WOW.js / Animate fadeInUp if used */
+#gallery .wow,
+#services2 .wow {
+  visibility: hidden;
+}
+
+#gallery .fadeInUp,
+#services2 .fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
