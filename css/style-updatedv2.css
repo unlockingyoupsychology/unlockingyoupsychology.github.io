@@ -484,6 +484,41 @@ a:hover, a:active, a:focus {
   transition: opacity 0.4s ease-in-out;
 }
 
+#gallery figcaption {
+  background-color: rgba(48, 67, 82, 0.6); /* initial semi-transparent */
+  color: #ffffff; /* keep text white */
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease, background-color 0.4s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#gallery figure {
+  position: relative;
+  overflow: hidden;
+}
+
+#gallery figure:hover figcaption {
+  background-color: rgba(48, 67, 82, 0.95); /* almost solid on hover */
+  opacity: 1;
+}
+
+#gallery figcaption h1,
+#gallery figcaption small {
+  color: #ffffff;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+#gallery figure:hover figcaption h1,
+#gallery figure:hover figcaption small {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 /*---------------------------------------
