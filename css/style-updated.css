@@ -43,7 +43,7 @@ h1 {
 }
 
 h2 {
-  color: #2be0a7;
+  color: #1e9e76;
   font-size: 1.2rem;
   font-weight: bold;
   letter-spacing: 4px;
@@ -75,12 +75,12 @@ p {
 }
 
 .btn:focus {
-  background: #42f5bc;
+  background: #2be0a7;
   border-color: transparent;
 }
 
 .btn-success {
-  background: #42f5bc;
+  background: #2be0a7;
   font-weight: 300;
   letter-spacing: 2px;
   padding: 14px 32px;
@@ -92,14 +92,14 @@ p {
 }
 
 a {
-  color: #42f5bc;
+  color: #2be0a7;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
   text-decoration: none !important;
 }
 a:hover, a:active, a:focus {
-  color: #42f5bc;
+  color: #2be0a7;
   outline: none;
 }
 
