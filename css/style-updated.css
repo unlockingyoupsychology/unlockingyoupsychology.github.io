@@ -464,7 +464,7 @@ a:hover, a:active, a:focus {
 
 #gallery .gallery-thumb {
   background-color: #ffffff;
-  box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 1);
+  box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.8);
   cursor: pointer;
   display: block;
   margin-bottom: 25px;
@@ -474,7 +474,7 @@ a:hover, a:active, a:focus {
 }
 
 #gallery .gallery-thumb:hover {
-  box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 1);
+  box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.8);
   top: -5px;
 }
 
@@ -524,7 +524,7 @@ a:hover, a:active, a:focus {
 }
 
 #contact input[type="submit"]:hover {
-  background: #222;
+  background: #2be0a7;
   color: #ffffff;
 }
 
@@ -569,7 +569,7 @@ footer {
 
 .social-icon li a:hover {
   background: #ffffff;
-  color: #e44c65;
+  color: #2be0a7;
 }
 
 
@@ -597,7 +597,7 @@ footer {
 }
 
 .go-top:hover {
-  background: #e44c65;
+  background: #2be0a7;
   color: #ffffff;
 }
 
