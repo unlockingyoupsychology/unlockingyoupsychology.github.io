@@ -507,7 +507,7 @@ a:hover, a:active, a:focus {
 }
 
 #contact .form-control:focus {
-  border-color: #e44c65;
+  border-color: #1e9e76;
   color: #ffffff;
 }
 
