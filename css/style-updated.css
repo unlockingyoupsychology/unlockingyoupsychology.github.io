@@ -1124,31 +1124,26 @@ a.button.primary {
   }
 }
 
-/* Mobile/touch device styles */
-@media (hover: none) and (pointer: coarse) {
-  /* Always show figcaption on mobile */
+/* Desktop hover effects - hide text initially, show on hover */
+@media (min-width: 769px) {
   #gallery figcaption,
   #services2 figcaption {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    width: 100%;
-    padding: 15px;
-    box-sizing: border-box;
-    opacity: 1;
-    transition: opacity 0.3s ease;
+    opacity: 0; /* Hide on desktop initially */
   }
   
-  /* Optional: Add touch feedback */
-  #gallery figure:active img,
-  #services2 figure:active img {
-    transform: scale(1.02);
-    opacity: 0.9;
+  #gallery figure:hover figcaption,
+  #services2 figure:hover figcaption {
+    opacity: 1; /* Show on hover */
+  }
+  
+  #gallery figure:hover img,
+  #services2 figure:hover img {
+    transform: scale(1.05);
+    opacity: 0.8;
   }
 }
 
-/* Fallback for older browsers - always show captions */
+/* Mobile - ensure text is always visible */
 @media (max-width: 768px) {
   #gallery figcaption,
   #services2 figcaption {
