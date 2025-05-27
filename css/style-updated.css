@@ -1105,40 +1105,20 @@ a.button.primary {
   width: 100%;
   padding: 15px;
   box-sizing: border-box;
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 
-/* Desktop behavior - hide overlay initially, show on hover */
-@media (min-width: 769px) {
-  #gallery figcaption,
-  #services2 figcaption {
-    opacity: 0; /* Hide the dark overlay and text on desktop initially */
-  }
-  
-  #gallery figure:hover figcaption,
-  #services2 figure:hover figcaption {
-    opacity: 1; /* Show the dark overlay and text on hover */
-  }
-  
-  #gallery figure:hover img,
-  #services2 figure:hover img {
-    transform: scale(1.05);
-    opacity: 0.8;
-  }
+#gallery figure:hover figcaption,
+#services2 figure:hover figcaption {
+  opacity: 1;
 }
 
-/* Mobile behavior - always show the dark overlay with text */
-@media (max-width: 768px) {
-  #gallery figcaption,
-  #services2 figcaption {
-    opacity: 1 !important; /* Always show the dark overlay with white text */
-  }
-  
-  /* Remove image hover effects on mobile */
-  #gallery figure img,
-  #services2 figure img {
-    opacity: 0.8; /* Slightly dim the image so text is more readable */
-  }
+#gallery figure:hover img,
+#services2 figure:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  opacity: 0.8;
 }
 
 /* Specific to cs-style-4 gallery layout */
