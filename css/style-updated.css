@@ -1046,7 +1046,6 @@ a.button.primary {
 
 
 /* ===== GALLERY & SERVICES SECTION STYLES ===== */
-
 /* Shared container styles */
 #gallery .container,
 #services2 .container {
@@ -1096,30 +1095,65 @@ a.button.primary {
   transition: transform 0.3s ease;
 }
 
-#gallery figure:hover img,
-#services2 figure:hover img {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-  opacity: 0.8;
+/* Desktop hover effects */
+@media (hover: hover) and (pointer: fine) {
+  #gallery figure:hover img,
+  #services2 figure:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+  }
+  
+  #gallery figure:hover figcaption,
+  #services2 figure:hover figcaption {
+    opacity: 1;
+  }
+  
+  /* Hide figcaption by default on desktop */
+  #gallery figcaption,
+  #services2 figcaption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
 }
 
-/* Figcaption styles */
-#gallery figcaption,
-#services2 figcaption {
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  width: 100%;
-  padding: 15px;
-  box-sizing: border-box;
-  opacity: 1;
-  transition: opacity 0.3s ease;
+/* Mobile/touch device styles */
+@media (hover: none) and (pointer: coarse) {
+  /* Always show figcaption on mobile */
+  #gallery figcaption,
+  #services2 figcaption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Optional: Add touch feedback */
+  #gallery figure:active img,
+  #services2 figure:active img {
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
 }
 
-#gallery figure:hover figcaption,
-#services2 figure:hover figcaption {
-  opacity: 1;
+/* Fallback for older browsers - always show captions */
+@media (max-width: 768px) {
+  #gallery figcaption,
+  #services2 figcaption {
+    opacity: 1 !important;
+  }
 }
 
 /* Specific to cs-style-4 gallery layout */
@@ -1156,24 +1190,6 @@ a.button.primary {
 #services2 .fadeInUp {
   animation-name: fadeInUp;
 }
-
-
-/* Mobile/touch device styles - always show text */
-@media (hover: none) and (pointer: coarse) {
-  #gallery figcaption,
-  #services2 figcaption {
-    opacity: 1 !important;
-  }
-}
-
-/* Fallback for older browsers */
-@media (max-width: 768px) {
-  #gallery figcaption,
-  #services2 figcaption {
-    opacity: 1 !important;
-  }
-}
-
 
 @keyframes fadeInUp {
   from {
