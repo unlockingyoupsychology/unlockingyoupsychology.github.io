@@ -375,7 +375,7 @@ a:hover, a:active, a:focus {
 #about .about-thumb {
   background: #ffffff;
   border-radius: 4px;
-  padding: 50px;
+  padding: 40px;
   position: relative;
 }
 
@@ -1095,45 +1095,29 @@ a.button.primary {
   transition: transform 0.3s ease;
 }
 
-/* Desktop hover effects */
-@media (hover: hover) and (pointer: fine) {
-  #gallery figure:hover img,
-  #services2 figure:hover img {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-    opacity: 0.8;
-  }
-  
-  #gallery figure:hover figcaption,
-  #services2 figure:hover figcaption {
-    opacity: 1;
-  }
-  
-  /* Hide figcaption by default on desktop */
-  #gallery figcaption,
-  #services2 figcaption {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    width: 100%;
-    padding: 15px;
-    box-sizing: border-box;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
+/* Figcaption styles */
+#gallery figcaption,
+#services2 figcaption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  transition: opacity 0.3s ease;
 }
 
-/* Desktop hover effects - hide text initially, show on hover */
+/* Desktop behavior - hide overlay initially, show on hover */
 @media (min-width: 769px) {
   #gallery figcaption,
   #services2 figcaption {
-    opacity: 0; /* Hide on desktop initially */
+    opacity: 0; /* Hide the dark overlay and text on desktop initially */
   }
   
   #gallery figure:hover figcaption,
   #services2 figure:hover figcaption {
-    opacity: 1; /* Show on hover */
+    opacity: 1; /* Show the dark overlay and text on hover */
   }
   
   #gallery figure:hover img,
@@ -1143,11 +1127,17 @@ a.button.primary {
   }
 }
 
-/* Mobile - ensure text is always visible */
+/* Mobile behavior - always show the dark overlay with text */
 @media (max-width: 768px) {
   #gallery figcaption,
   #services2 figcaption {
-    opacity: 1 !important;
+    opacity: 1 !important; /* Always show the dark overlay with white text */
+  }
+  
+  /* Remove image hover effects on mobile */
+  #gallery figure img,
+  #services2 figure img {
+    opacity: 0.8; /* Slightly dim the image so text is more readable */
   }
 }
 
