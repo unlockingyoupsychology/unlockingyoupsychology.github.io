@@ -1157,6 +1157,24 @@ a.button.primary {
   animation-name: fadeInUp;
 }
 
+
+/* Mobile/touch device styles - always show text */
+@media (hover: none) and (pointer: coarse) {
+  #gallery figcaption,
+  #services2 figcaption {
+    opacity: 1 !important;
+  }
+}
+
+/* Fallback for older browsers */
+@media (max-width: 768px) {
+  #gallery figcaption,
+  #services2 figcaption {
+    opacity: 1 !important;
+  }
+}
+
+
 @keyframes fadeInUp {
   from {
     transform: translate3d(0, 40px, 0);
