@@ -1226,3 +1226,25 @@ a.button.primary {
   }
 
 }
+
+
+/* Hide images on mobile devices (screens smaller than 768px) - Only in services section */
+@media (max-width: 767px) {
+  #service2 .grid figure div img {
+    display: none;
+  }
+  
+  /* Optional: Adjust figcaption styling when image is hidden */
+  .grid figure figcaption {
+    position: static; /* Remove any absolute positioning */
+    background: transparent; /* Remove overlay background if any */
+    color: inherit; /* Use default text color */
+    padding: 15px; /* Add some padding for better spacing */
+  }
+  
+  /* Optional: Make the figure container more compact on mobile */
+  .grid figure {
+    height: auto;
+    min-height: auto;
+  }
+}
