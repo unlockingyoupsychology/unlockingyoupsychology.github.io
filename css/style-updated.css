@@ -1234,16 +1234,22 @@ a.button.primary {
     display: none;
   }
   
-  /* Optional: Adjust figcaption styling when image is hidden */
-  .grid figure figcaption {
-    position: static; /* Remove any absolute positioning */
-    background: transparent; /* Remove overlay background if any */
-    color: inherit; /* Use default text color */
-    padding: 15px; /* Add some padding for better spacing */
+  /* Make figcaption visible on mobile (override hover-only behavior) */
+  #service2 .grid figure figcaption {
+    position: static !important; /* Remove any absolute positioning */
+    opacity: 1 !important; /* Make sure it's visible */
+    visibility: visible !important; /* Override any visibility:hidden */
+    transform: none !important; /* Remove any transforms */
+    background: rgba(255, 255, 255, 0.9); /* Light background for readability */
+    color: #333 !important; /* Dark text for contrast */
+    padding: 20px; /* Add padding for better spacing */
+    margin-top: 0; /* Remove any top margin */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Optional: subtle shadow */
   }
   
-  /* Optional: Make the figure container more compact on mobile */
-  .grid figure {
+  /* Make the figure container more compact on mobile */
+  #service2 .grid figure {
     height: auto;
     min-height: auto;
   }
