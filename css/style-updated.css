@@ -1265,3 +1265,380 @@ a.button.primary {
      min-height: auto;
    }
  }
+
+ /* Clinical Psychologist Section - New Clean Design */
+.psychologist-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 60px;
+  border-radius: 12px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+.psychologist-section .section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.psychologist-section .section-header h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #333;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.psychologist-section .content-wrapper {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.psychologist-section .text-content {
+  flex: 1;
+  order: 1;
+}
+
+.psychologist-section .text-content h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+.psychologist-section .text-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.psychologist-section .image-content {
+  flex: 0 0 350px;
+  order: 2;
+}
+
+.psychologist-section .image-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.psychologist-section .credentials {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  margin-top: 50px;
+  padding-top: 40px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.psychologist-section .credential-box {
+  flex: 1;
+  text-align: center;
+  padding: 25px 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.psychologist-section .credential-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.psychologist-section .credential-box i {
+  font-size: 2.5em;
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.psychologist-section .credential-box p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .psychologist-section .content-wrapper {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+  
+  .psychologist-section .image-content {
+    flex: 0 0 auto;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  
+  .psychologist-section {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .psychologist-section .credentials {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .psychologist-section {
+    padding: 30px 20px;
+  }
+  
+  .psychologist-section .section-header h2 {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+  }
+  
+  .psychologist-section .text-content h3 {
+    font-size: 1.5rem;
+  }
+  
+  .psychologist-section .text-content p {
+    font-size: 16px;
+  }
+}
+
+
+/* ============================================
+   NEW SERVICES SECTION
+   ============================================ */
+
+.services-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #e8e8eb;
+  padding: 60px;
+  border-radius: 12px;
+}
+
+.services-header {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.services-header h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #4a4a4a;
+  margin-bottom: 10px;
+}
+
+.services-header hr {
+  border: none;
+  border-top: 2px solid #999;
+  width: 100%;
+  margin: 20px 0 40px 0;
+}
+
+/* We specialize section */
+.specialize-section {
+  margin-bottom: 60px;
+}
+
+.specialize-section h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #4a4a4a;
+  margin-bottom: 40px;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.expertise-item {
+  text-align: center;
+}
+
+.expertise-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expertise-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.expertise-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4a4a4a;
+  line-height: 1.4;
+}
+
+/* Modalities section */
+.modalities-section {
+  margin-bottom: 60px;
+}
+
+.modalities-section h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #4a4a4a;
+  margin-bottom: 30px;
+}
+
+.modalities-section hr {
+  border: none;
+  border-top: 2px solid #999;
+  width: 100%;
+  margin: 30px 0;
+}
+
+.modalities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.modality-box {
+  background: #c4d3c0;
+  padding: 20px 25px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT - Green boxes change on mouse hover */
+.modality-box:hover {
+  background: #a8bda4;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modality-box h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d2d2d;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.modalities-row-2 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.modalities-row-2 .modality-box {
+  flex: 1;
+  max-width: 330px;
+}
+
+/* Location section */
+
+.location-section {
+  text-align: left;
+}
+
+.location-section hr {
+  border: none;
+  border-top: 2px solid #999;
+  width: 100%;
+  margin: 30px 0;
+}
+
+.location-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.location-text {
+  flex: 1;
+}
+
+.location-text h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #4a4a4a;
+  margin-bottom: 30px;
+}
+
+.location-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+}
+
+.location-image {
+  flex: 0 0 300px;
+}
+
+.location-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsive Design for Services */
+@media (max-width: 968px) {
+  .expertise-grid,
+  .modalities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .location-content {
+    flex-direction: column;
+  }
+  
+  .location-image {
+    flex: 0 0 auto;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 40px 30px;
+  }
+  
+  .expertise-grid,
+  .modalities-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .modalities-row-2 {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  
+  .modalities-row-2 .modality-box {
+    max-width: 100%;
+  }
+  
+  .services-header h1 {
+    font-size: 2rem;
+  }
+  
+  .specialize-section h2,
+  .modalities-section h2,
+  .location-text h2 {
+    font-size: 1.5rem;
+  }
+}
