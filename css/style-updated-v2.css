@@ -1,0 +1,939 @@
+/*===========================================
+  UNLOCKING YOU PSYCHOLOGY - NEW COLOR SCHEME
+  Save this as: style-updated-NEW.css
+  ===========================================*/
+
+/*===========================================
+  CSS VARIABLES - Color Palette
+  ===========================================*/
+:root {
+  /* Primary Colors */
+  --primary-green: #6e8d77;
+  --accent-green: #2be0a7;
+  --dark-blue: #2c3e50;
+  
+  /* Supporting Colors */
+  --light-grey: #f8f9fa;
+  --medium-grey: #e8e8eb;
+  --dark-grey: #555555;
+  --white: #ffffff;
+  
+  /* Accent Colors */
+  --crisis-red: #d63031;
+  --soft-green: #c4d3c0;
+  --soft-green-hover: #a8bda4;
+  
+  /* Typography */
+  --font-main: 'Source Sans Pro', sans-serif;
+  
+  /* Consistent Section Width */
+  --section-width: 1000px;
+  
+  /* Header Sizes */
+  --header-main: 2.5rem;
+  --header-sub: 1.8rem;
+  --header-small: 1.2rem;
+}
+
+/*===========================================
+  BASE STYLES
+  ===========================================*/
+body {
+  background: var(--white);
+  font-family: var(--font-main);
+  font-style: normal;
+  font-weight: 300;
+  position: relative;
+  color: var(--dark-grey);
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 100%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*===========================================
+  CONSISTENT TYPOGRAPHY
+  ===========================================*/
+h1, h2, h3, h4 {
+  font-weight: 400;
+  font-family: var(--font-main);
+}
+
+h1 {
+  font-size: var(--header-main);
+  line-height: 1.3;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: var(--header-sub);
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--primary-green);
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: var(--header-small);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary-green);
+}
+
+p {
+  color: var(--dark-grey);
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/*===========================================
+  LINKS & BUTTONS
+  ===========================================*/
+a {
+  color: var(--accent-green);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-decoration: none !important;
+}
+
+a:hover, a:active, a:focus {
+  color: var(--primary-green);
+  outline: none;
+}
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+  font-family: var(--font-main);
+}
+
+.btn:focus {
+  background: var(--accent-green);
+  border-color: transparent;
+}
+
+.btn-success {
+  background: var(--accent-green);
+  font-weight: 400;
+  letter-spacing: 2px;
+  padding: 14px 32px;
+  margin-top: 26px;
+  color: var(--white);
+}
+
+.btn-success:hover {
+  background: var(--primary-green);
+  color: var(--white);
+}
+
+/*===========================================
+  PRELOADER
+  ===========================================*/
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--white);
+}
+
+.sk-spinner-pulse {
+  width: 60px;
+  height: 60px;
+  background-color: var(--accent-green);
+  border-radius: 100%;
+  animation: sk-pulseScaleOut 1s infinite ease-in-out;
+}
+
+@keyframes sk-pulseScaleOut {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); opacity: 0; }
+}
+
+/*===========================================
+  NAVIGATION
+  ===========================================*/
+.navbar-default {
+  background: var(--white);
+  box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
+  border: none;
+  margin-bottom: 0 !important;
+  min-height: 75px;
+}
+
+.navbar-default .navbar-brand {
+  color: var(--primary-green);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 0;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo {
+  height: 40px;
+  width: auto;
+  display: inline-block;
+}
+
+.brand-text {
+  font-family: var(--font-main);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-green);
+}
+
+.navbar-default .navbar-nav li a {
+  color: var(--dark-grey);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in-out;
+  padding-right: 22px;
+  padding-left: 22px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-default .navbar-nav li a span {
+  position: relative;
+  display: block;
+  padding-bottom: 2px;
+}
+
+.navbar-default .navbar-nav li a span:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-green);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-default .navbar-nav li a:hover span:before,
+.navbar-default .navbar-nav li.active a span:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.navbar-default .navbar-nav > li a:hover,
+.navbar-default .navbar-nav > .active > a {
+  color: var(--primary-green) !important;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle {
+  border: none;
+  padding-top: 10px;
+  margin: 20px 0;
+}
+
+.navbar-default .navbar-header {
+  height: 75px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-default .navbar-collapse {
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-default .navbar-nav li a span:before {
+    background: transparent !important;
+  }
+  .navbar-default .navbar-nav li.active a {
+    color: var(--primary-green) !important;
+  }
+}
+
+/*===========================================
+  SECTION STYLING
+  ===========================================*/
+.section-title {
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.section-title h1 {
+  font-size: var(--header-main);
+  letter-spacing: 8px;
+  color: var(--dark-blue);
+}
+
+#about,
+#service2,
+#contact {
+  padding: 80px 0;
+}
+
+/*===========================================
+  HOME SECTION
+  ===========================================*/
+#home {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  background: var(--dark-blue);
+}
+
+#home .overlay {
+  background: var(--dark-blue);
+  opacity: 0.95;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#home .container {
+  position: relative;
+  z-index: 2;
+}
+
+#home h1 {
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+#home p {
+  color: var(--white);
+}
+
+/*===========================================
+  ABOUT SECTION - Light Grey
+  ===========================================*/
+#about {
+  background: var(--light-grey);
+}
+
+/*===========================================
+  CLINICAL PSYCHOLOGIST SECTION
+  ===========================================*/
+.psychologist-section {
+  max-width: var(--section-width);
+  margin: 0 auto;
+  background: var(--white);
+  padding: 60px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.psychologist-section .section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.psychologist-section .section-header h2 {
+  font-size: var(--header-main);
+  color: var(--dark-blue);
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.psychologist-section .content-wrapper {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.psychologist-section .text-content {
+  flex: 1;
+}
+
+.psychologist-section .text-content h3 {
+  font-size: var(--header-sub);
+  font-weight: 600;
+  color: var(--primary-green);
+  margin-bottom: 25px;
+}
+
+.psychologist-section .text-content p {
+  color: var(--dark-grey);
+  line-height: 1.8;
+}
+
+.psychologist-section .image-content {
+  flex: 0 0 350px;
+}
+
+.psychologist-section .image-content img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.psychologist-section .credentials {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+  padding-top: 40px;
+  border-top: 2px solid var(--primary-green);
+}
+
+.psychologist-section .credential-box {
+  flex: 1;
+  text-align: center;
+  padding: 25px 20px;
+  background: var(--light-grey);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.psychologist-section .credential-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.psychologist-section .credential-box i {
+  font-size: 2.5em;
+  color: var(--accent-green);
+  margin-bottom: 15px;
+}
+
+.psychologist-section .credential-box:hover i {
+  color: var(--primary-green);
+}
+
+.psychologist-section .credential-box p {
+  font-weight: 600;
+  color: var(--dark-blue);
+  margin: 0;
+}
+
+/*===========================================
+  SERVICES SECTION - Medium Grey
+  ===========================================*/
+#service2 {
+  background: var(--medium-grey);
+}
+
+.services-section {
+  max-width: var(--section-width);
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.services-header h1 {
+  font-size: var(--header-main);
+  color: var(--dark-blue);
+  letter-spacing: 8px;
+}
+
+.services-header hr,
+.modalities-section hr,
+.location-section hr {
+  border: none;
+  border-top: 3px solid var(--primary-green);
+  width: 100px;
+  margin: 20px auto 40px;
+}
+
+.specialize-section h2,
+.modalities-section h2,
+.location-text h2 {
+  font-size: var(--header-sub);
+  color: var(--primary-green);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.expertise-item {
+  text-align: center;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expertise-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.expertise-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expertise-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.expertise-item h3 {
+  font-size: var(--header-small);
+  font-weight: 600;
+  color: var(--dark-blue);
+}
+
+.modalities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.modality-box {
+  background: var(--soft-green);
+  padding: 20px 25px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modality-box:hover {
+  background: var(--soft-green-hover);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modality-box h3 {
+  font-size: var(--header-small);
+  font-weight: 600;
+  color: var(--dark-blue);
+  margin: 0;
+}
+
+.modalities-row-2 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.modalities-row-2 .modality-box {
+  flex: 1;
+}
+
+.location-section {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.location-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.location-text {
+  flex: 1;
+  text-align: left;
+}
+
+.location-text p {
+  color: var(--dark-grey);
+}
+
+.location-image {
+  flex: 0 0 300px;
+}
+
+.location-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/*===========================================
+  BOOKING SECTION
+  ===========================================*/
+#book {
+  padding: 0;
+  margin: 0;
+}
+
+#book iframe {
+  width: 100%;
+  border: none;
+}
+
+/*===========================================
+  CONTACT SECTION - Dark Blue
+  ===========================================*/
+#contact {
+  background: var(--dark-blue);
+  color: var(--white);
+  position: relative;
+}
+
+#contact .overlay {
+  background: var(--dark-blue);
+  opacity: 0.95;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#contact .container {
+  position: relative;
+  z-index: 2;
+  max-width: var(--section-width);
+}
+
+#contact h1 {
+  color: var(--white);
+  letter-spacing: 8px;
+}
+
+#contact p {
+  color: var(--white);
+}
+
+#contact .form-control {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: var(--white);
+  font-size: 18px;
+  margin: 10px 0 14px;
+  transition: all 0.4s ease-in-out;
+}
+
+#contact .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#contact .form-control:focus {
+  border-color: var(--accent-green);
+  color: var(--white);
+}
+
+#contact input {
+  height: 55px;
+}
+
+#contact input[type="submit"] {
+  background: var(--accent-green);
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+}
+
+#contact input[type="submit"]:hover {
+  background: var(--primary-green);
+}
+
+#contact a {
+  color: var(--accent-green);
+}
+
+#contact a:hover {
+  color: var(--primary-green);
+}
+
+/*===========================================
+  FOOTER - Light Grey
+  ===========================================*/
+footer {
+  padding: 60px 0 40px;
+  background: var(--light-grey) !important;
+  position: relative;
+  z-index: 10;
+}
+
+footer * {
+  background: transparent;
+}
+
+footer .container {
+  max-width: 1100px;
+}
+
+footer .overlay {
+  display: none !important;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid var(--primary-green);
+  margin-bottom: 30px;
+}
+
+.footer-column {
+  text-align: center;
+  flex: 1;
+}
+
+.footer-logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px;
+  display: block;
+  background: var(--white);
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.footer-column h3 {
+  color: var(--primary-green);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.footer-column h4 {
+  color: var(--dark-blue);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.footer-column p {
+  color: var(--dark-grey);
+  font-size: 16px;
+  word-wrap: break-word;
+}
+
+.footer-column a {
+  color: var(--primary-green);
+  word-wrap: break-word;
+}
+
+.footer-column a:hover {
+  color: var(--accent-green);
+}
+
+.footer-column i {
+  color: var(--accent-green);
+  margin-right: 8px;
+}
+
+.footer-crisis-notice {
+  background: rgba(214, 48, 49, 0.1) !important;
+  padding: 25px 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border-left: 4px solid var(--crisis-red);
+}
+
+.footer-crisis-notice p {
+  color: var(--dark-blue);
+  font-size: 15px;
+  text-align: center;
+  margin: 0;
+}
+
+.footer-crisis-notice strong {
+  color: var(--crisis-red);
+  font-weight: 600;
+}
+
+.footer-copyright {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.footer-copyright p {
+  color: var(--dark-grey);
+  font-size: 14px;
+  margin: 0;
+}
+
+/*===========================================
+  BACK TO TOP
+  ===========================================*/
+.go-top {
+  background-color: var(--white);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  bottom: 2em;
+  right: 2em;
+  color: var(--dark-blue);
+  font-size: 26px;
+  display: none;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 100%;
+  z-index: 999;
+}
+
+.go-top:hover {
+  background: var(--accent-green);
+  color: var(--white);
+}
+
+/*===========================================
+  RESPONSIVE DESIGN
+  ===========================================*/
+@media (max-width: 968px) {
+  :root {
+    --section-width: 90%;
+    --header-main: 2rem;
+    --header-sub: 1.5rem;
+  }
+
+  .psychologist-section .content-wrapper {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .psychologist-section .image-content {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .psychologist-section {
+    padding: 40px 30px;
+  }
+
+  .expertise-grid,
+  .modalities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .location-content {
+    flex-direction: column;
+  }
+
+  .location-image {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .services-section {
+    padding: 40px 30px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-main: 1.8rem;
+    --header-sub: 1.4rem;
+    --header-small: 1rem;
+  }
+
+  h1 {
+    letter-spacing: 4px;
+  }
+
+  #about,
+  #service2,
+  #contact {
+    padding: 60px 0;
+  }
+
+  .psychologist-section .credentials {
+    flex-direction: column;
+  }
+
+  .psychologist-section {
+    padding: 30px 20px;
+  }
+
+  .expertise-grid,
+  .modalities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modalities-row-2 {
+    flex-direction: column;
+  }
+
+  footer {
+    padding: 40px 0 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --header-main: 1.5rem;
+    --header-sub: 1.2rem;
+  }
+
+  h1 {
+    letter-spacing: 2px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
