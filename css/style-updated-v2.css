@@ -359,11 +359,14 @@ a:hover, a:active, a:focus {
 }
 
 /*===========================================
-  CLINICAL PSYCHOLOGIST SECTION
+  CLINICAL PSYCHOLOGIST SECTION & FEES SECTION
   ===========================================*/
-.psychologist-section {
+#about .container,
+#fees .container {
   max-width: var(--section-width);
-  margin: 0 auto;
+}
+
+.psychologist-section {
   background: var(--white);
   padding: 60px;
   border-radius: 12px;
@@ -457,12 +460,13 @@ a:hover, a:active, a:focus {
   ===========================================*/
 #service2 {
   background: var(--medium-grey);
+  padding: 80px 0;
 }
 
 .services-section {
   max-width: var(--section-width);
   margin: 0 auto;
-  padding: 50px;
+  padding: 0 50px;
 }
 
 .services-header {
@@ -609,16 +613,64 @@ a:hover, a:active, a:focus {
 }
 
 /*===========================================
-  BOOKING SECTION
+  BOOKING SECTION - Medium Grey (matches Services)
   ===========================================*/
 #book {
-  padding: 0;
-  margin: 0;
+  background: var(--medium-grey);
+  padding: 80px 0;
 }
 
-#book iframe {
+#book .container {
+  max-width: var(--section-width);
+}
+
+.book-section .section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.book-section .section-header h2 {
+  font-size: var(--header-main);
+  color: var(--dark-blue);
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.iframe-container {
+  background: var(--white);
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  max-width: 97%;
+}
+
+.iframe-container iframe {
   width: 100%;
+  height: 700px;
   border: none;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  #book .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  #book .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .iframe-container iframe {
+    height: 600px;
+  }
 }
 
 /*===========================================
